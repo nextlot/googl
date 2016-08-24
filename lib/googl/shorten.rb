@@ -8,7 +8,7 @@ module Googl
 
     # Creates a new short URL, see Googl.shorten
     #
-    def initialize(long_url, user_ip=nil, api_key=nil)
+    def initialize(long_url, api_key=nil)
       shorten_url = API_URL
       modify_headers('Content-Type' => 'application/json')
       options = {"longUrl" => long_url}.to_json
